@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageGalleryItems from '../ImageGalleryItem/ImageGalleryItem';
-import Button from '../App';
+import Button from '../Button/Button';
 import './ImageGallery.css';
 
 const ImageGallery = ({ data, loadMore, largeImg }) => {
