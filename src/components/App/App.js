@@ -4,6 +4,7 @@ import Searchbar from '../Searchbar/Searchbar';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Modal from '../Modal/Modal';
 import Loader from '../Loader/Loader';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -14,7 +15,7 @@ class App extends Component {
     loading: false,
     largeImageURL: null,
   };
-  async componentDidUpdate(prevState) {
+  async componentDidUpdate(prevProps, prevState) {
     if (
       prevState.search !== this.state.search ||
       prevState.page !== this.state.page
