@@ -15,6 +15,7 @@ class App extends Component {
     loading: false,
     largeImageURL: null,
   };
+
   async componentDidUpdate(prevProps, prevState) {
     if (
       prevState.search !== this.state.search ||
@@ -36,7 +37,6 @@ class App extends Component {
     }
   }
   setLargeImage = url => {
-    console.dir(url.target.dataset.large);
     this.setState({
       largeImageURL: url.target.dataset.large,
     });
@@ -55,13 +55,12 @@ class App extends Component {
     await this.setState({
       page: page + 1,
     });
-    console.log(this.state.page);
-    console.log(this.state.per_page);
   };
 
   closeModal = () => {
     this.setState({ largeImageURL: null });
   };
+
   render() {
     const { articles } = this.state;
     return (
